@@ -14,10 +14,30 @@ A free Model Context Protocol (MCP) server that provides stock market data and s
 - **screen_stocks_valuation**: Screen stocks using valuation metrics (P/E, P/B, etc.)
 - **screen_stocks_performance**: Screen stocks using performance metrics
 - **screen_stocks_technical**: Screen stocks using technical indicators
+- **screen_stocks_financial**: Screen stocks using financial statement filters
+- **screen_stocks_ownership**: Screen stocks by ownership metrics
+- **screen_stocks_ticker**: Return only ticker symbols for a given screener
+- **compare_stocks**: Compare a stock with peers by sector, industry, or country
 
-### Market Data
-- **get_market_news**: Get general market news and blogs
-- **get_insider_trading**: Get insider trading information
+### Market & News Data
+- **get_market_news**: Get general market news and blog posts
+- **get_insider_trading**: Get insider trading information (latest, top week, etc.)
+
+### Forex / Crypto / Futures
+- **get_forex_performance**: Get current forex performance (percent or PIPS)
+- **get_forex_chart**: Retrieve forex chart URLs or download images
+- **get_crypto_performance**: Get cryptocurrency performance data
+- **get_crypto_chart**: Retrieve crypto chart URLs or download images
+- **get_future_performance**: Get futures performance for various timeframes
+
+### Calendar & Earnings
+- **get_earnings_calendar**: Fetch upcoming or past earnings calendar data
+- **get_economic_calendar**: Get economic calendar information
+- **export_earnings_csv**: Save earnings calendar data to CSV files
+- **export_earnings_excel**: Save earnings calendar data to an Excel workbook
+
+### Additional Details
+All tools are exposed via a standard MCP `list_tools` call so clients can discover them dynamically. See the example usage section below for JSON payloads.
 
 ## Installation
 
