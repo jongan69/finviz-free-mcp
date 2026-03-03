@@ -1,0 +1,2 @@
+[console_scripts]
+finviz-free-mcp = finviz_free_mcp.server:main

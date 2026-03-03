@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finviz-free-mcp"
+version = "1.0.0"
+description = "Free Finviz MCP Server using finvizfinance package"
+authors = [
+    {name = "Local Developer", email = "dev@example.com"}
+]
+dependencies = [
+    "mcp>=1.9.1",
+    "finvizfinance>=0.14.7",
+    "pandas>=2.0.0",
+    "xlsxwriter>=3.0.0",
+]
+requires-python = ">=3.8"
+
+[project.scripts]
+finviz-free-mcp = "finviz_free_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
